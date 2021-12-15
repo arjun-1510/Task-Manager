@@ -1,0 +1,16 @@
+const mongoose = require('mongoose')
+
+const connectionString = 'mongodb+srv://arjun:1234@cluster0.ksreb.mongodb.net/TASKMANAGER?retryWrites=true&w=majority'
+
+
+ mongoose.connect( connectionString
+  /*  {
+    useNewUrlParser: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+    useUnifiedTopology: true
+
+ } */
+ )
+ .then(() => console.log('CONNECTED DB'))
+ .catch((err) => console.log(err))
